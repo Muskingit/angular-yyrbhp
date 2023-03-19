@@ -1,0 +1,12 @@
+<table id="employees">
+  <tr>
+    <!-- <th>ID</th> -->
+    <th>First Name</th>
+    <th>Last Name</th>
+  </tr>
+  <tr *ngFor="let employee of employeeData?.patientDetails">
+   
+    <td>{{ employee.firstName }}</td>
+    <td>{{ employee.lastName }}</td>
+  </tr>
+</table>
