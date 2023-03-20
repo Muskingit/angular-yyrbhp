@@ -1,12 +1,37 @@
 <table id="employees">
   <tr>
     <!-- <th>ID</th> -->
-    <th>First Name</th>
-    <th>Last Name</th>
+    <th>Cliam status</th>
+    <th>Documents</th>
   </tr>
-  <tr *ngFor="let employee of employeeData?.patientDetails">
-   
-    <td>{{ employee.firstName }}</td>
-    <td>{{ employee.lastName }}</td>
+  <tr *ngFor="let employee of dataemp">
+    <div style="display:flex">
+      <div>patientDetails:</div>
+      <div>
+        {{ employee.patientDetails.firstName }}
+        {{ employee.patientDetails.lastName }}
+      </div>
+    </div>
+    <div style="display:flex">
+      <div>Claim Number:</div>
+      <div>{{ employee.claimNumber.claimNumber }}</div>
+    </div>
+
+    <div style="display:flex">
+      <div>Date submited:</div>
+      <div>{{ employee.claimNumber.DataSubmitted }}</div>
+    </div>
+
+    <div style="display:flex">
+      <div>Documents Status:</div>
+      <div>{{ employee.claimNumber.ClaimStatus }}</div>
+    </div>
+
+    <div>
+      <p></p>
+      {{ employee.claimNumber.DataSubmitted }}
+    </div>
+    <div><p></p></div>
+    <br />
   </tr>
 </table>
